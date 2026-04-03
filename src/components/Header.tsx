@@ -32,6 +32,7 @@ export function Header({ onSearch, onCategoryChange, selectedCategory }: HeaderP
     { label: '后端技术', value: '后端技术' },
     { label: '算法学习', value: '算法学习' },
     { label: '生活随笔', value: '生活随笔' },
+    { label: '大数据学习', value: '大数据学习' }
   ];
 
   return (

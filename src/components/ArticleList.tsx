@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import type { BlogPost } from '@/types/blog';
 import { ArticleCard } from './ArticleCard';
 import { FileSearch, Sparkles } from 'lucide-react';
+import NoteModal from './NoteModal';
 
 interface ArticleListProps {
   posts: BlogPost[];
@@ -8,6 +10,8 @@ interface ArticleListProps {
 }
 
 export function ArticleList({ posts, searchQuery }: ArticleListProps) {
+  const [openNote, setOpenNote] = useState('');
+
   if (posts.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-20 text-center">
@@ -44,9 +48,23 @@ export function ArticleList({ posts, searchQuery }: ArticleListProps) {
       {/* 文章网格 */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {posts.map((post) => (
-          <ArticleCard key={post.id} post={post} />
+          <div
+            key={post.id}
+            onClick={() => setOpenNote(post.content)}
+            className="cursor-pointer"
+          >
+            <ArticleCard post={post} />
+          </div>
         ))}
       </div>
+
+      {/* 笔记弹窗 */}
+      {openNote && (
+        <NoteModal
+          content={openNote}
+          onClose={() => setOpenNote('')}
+        />
+      )}
     </div>
   );
 }

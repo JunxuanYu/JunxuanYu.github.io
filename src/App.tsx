@@ -5,25 +5,21 @@ import { ArticleList } from '@/components/ArticleList';
 import { Sidebar } from '@/components/Sidebar';
 import { Footer } from '@/components/Footer';
 import { blogPosts } from '@/data/blogData';
+import NotesList from './components/NotesList'; // 👈 只加这一行
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  // 过滤文章
   const filteredPosts = useMemo(() => {
     return blogPosts.filter((post) => {
-      // 分类过滤
-      if (selectedCategory && post.category !== selectedCategory) {
-        return false;
-      }
-      // 搜索过滤
+      if (selectedCategory && post.category !== selectedCategory) return false;
       if (searchQuery) {
-        const query = searchQuery.toLowerCase();
+        const q = searchQuery.toLowerCase();
         return (
-          post.title.toLowerCase().includes(query) ||
-          post.excerpt.toLowerCase().includes(query) ||
-          post.tags.some((tag) => tag.toLowerCase().includes(query))
+          post.title.toLowerCase().includes(q) ||
+          post.excerpt.toLowerCase().includes(q) ||
+          post.tags.some(tag => tag.toLowerCase().includes(q))
         );
       }
       return true;
@@ -41,31 +37,31 @@ function App() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* 背景图案 */}
       <div className="fixed inset-0 bg-pattern-hearts opacity-30 pointer-events-none" />
       
-      {/* Header */}
       <Header
         onSearch={handleSearch}
         onCategoryChange={handleCategoryChange}
         selectedCategory={selectedCategory}
       />
 
-      {/* Main Content */}
       <main className="relative">
-        {/* Hero Section */}
         <Hero />
+        
+        {/* ✅ 笔记区域（放在这里最完美） */}
+        <section className="py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <NotesList />
+          </div>
+        </section>
 
-        {/* Content Section */}
+        {/* 你的原有博客 */}
         <section className="py-12 lg:py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* 文章列表 */}
               <div className="lg:col-span-2">
                 <ArticleList posts={filteredPosts} searchQuery={searchQuery} />
               </div>
-
-              {/* 侧边栏 */}
               <div className="hidden lg:block">
                 <div className="sticky top-24">
                   <Sidebar
@@ -78,7 +74,6 @@ function App() {
           </div>
         </section>
 
-        {/* 移动端侧边栏 */}
         <section className="lg:hidden py-8 border-t border-primary/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Sidebar
@@ -89,7 +84,6 @@ function App() {
         </section>
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

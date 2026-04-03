@@ -108,7 +108,8 @@ export function ArticleCard({ post }: ArticleCardProps) {
             <div className="flex items-center gap-2 mb-3">
               <Badge
                 variant="secondary"
-                className={`${categoryColors[post.category] || 'bg-gray-100 text-gray-600'} rounded-full px-3 py-1 font-medium`}
+                // 根据分类生成不同的颜色
+                className={`${categoryColors[post.category] || 'bg-gray-100 text-gray-300'} rounded-full px-3 py-1 font-medium`}
               >
                 {post.category}
               </Badge>

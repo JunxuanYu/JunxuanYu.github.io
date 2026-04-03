@@ -91,7 +91,7 @@ export function Sidebar({ onCategorySelect, selectedCategory }: SidebarProps) {
       </div>
 
       {/* 每日一句 */}
-      <div className="bg-gradient-to-br from-primary/20 to-rose-400/20 rounded-3xl p-6 border border-primary/10">
+      <div className="bg-gradient-to-br from-primary/20 to-rose-200 rounded-3xl p-6 border border-primary/10">
         <div className="flex items-center gap-2 mb-3">
           <Sparkles className="w-5 h-5 text-primary" />
           <h3 className="font-bold text-foreground">每日一句</h3>
