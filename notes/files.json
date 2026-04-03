@@ -10,5 +10,11 @@
       "fileName": "Flume.md",
       "path": "/notes/Flume.md"
     }
+    ,
+    {
+      "title": "MapReduce的学习笔记",
+      "fileName": "MapReduce.md",
+      "path": "/notes/MapReduce.md"
+    }
   ]
 }
