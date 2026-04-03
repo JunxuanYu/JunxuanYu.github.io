@@ -182,7 +182,7 @@
    
   background: rgb(96, 190, 97); /* 背景颜色*/
   border: 1px solid rgba(255, 255, 255, 0.982); /* 边框颜色*/
-  order-radius: 16px; /*圆角 */
+  border-radius: 16px;  
   padding: 24px;
   text-align: center;
   color: #0c0c0c;    /*文字颜色*/
