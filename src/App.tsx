@@ -47,14 +47,7 @@ function App() {
 
       <main className="relative">
         <Hero />
-        
-        {/* ✅ 笔记区域（放在这里最完美） */}
-        <section className="py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <NotesList />
-          </div>
-        </section>
-
+       
         {/* 你的原有博客 */}
         <section className="py-12 lg:py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,6 +64,13 @@ function App() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+ 
+        {/* ✅ 笔记区域（放在这里最完美） */}
+        <section className="py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <NotesList />
           </div>
         </section>
 
