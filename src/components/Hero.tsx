@@ -33,7 +33,7 @@ export function Hero() {
           {/* 主标题 */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6">
             <span className="bg-gradient-to-r from-primary via-rose-400 to-purple-400 bg-clip-text text-transparent">
-              小可爱的
+              Tulip的
             </span>
             <br />
             <span className="text-foreground">学习笔记</span>

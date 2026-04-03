@@ -19,7 +19,7 @@ export function Footer() {
                 <Heart className="w-5 h-5 text-white fill-white" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-primary to-rose-400 bg-clip-text text-transparent">
-                小可爱的笔记
+                Tulip的笔记
               </span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
@@ -88,9 +88,9 @@ export function Footer() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-sm text-muted-foreground">
             <span>Made with</span>
             <Heart className="w-4 h-4 text-rose-400 fill-rose-400 animate-pulse-soft" />
-            <span>by 小可爱</span>
+            <span>by Tulip</span>
             <span className="hidden sm:inline">·</span>
-            <span>© {currentYear} 小可爱的学习笔记</span>
+            <span>© {currentYear} Tulip的学习笔记</span>
           </div>
         </div>
       </div>

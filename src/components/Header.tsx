@@ -50,7 +50,7 @@ export function Header({ onSearch, onCategoryChange, selectedCategory }: HeaderP
               <Heart className="w-5 h-5 text-white fill-white" />
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-primary to-rose-400 bg-clip-text text-transparent">
-              小可爱的笔记
+              Tulip的笔记
             </span>
           </div>
 

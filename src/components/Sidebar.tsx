@@ -18,7 +18,7 @@ export function Sidebar({ onCategorySelect, selectedCategory }: SidebarProps) {
             👩‍💻
           </div>
           <div>
-            <h3 className="font-bold text-foreground">小可爱</h3>
+            <h3 className="font-bold text-foreground">Tulip</h3>
             <p className="text-sm text-muted-foreground">前端开发者</p>
           </div>
         </div>
