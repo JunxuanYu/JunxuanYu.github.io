@@ -14,8 +14,8 @@ export function Sidebar({ onCategorySelect, selectedCategory }: SidebarProps) {
       {/* 关于我 */}
       <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-6 shadow-lg shadow-primary/5 border border-primary/5">
         <div className="flex items-center gap-3 mb-4">
-          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-rose-400 flex items-center justify-center text-3xl shadow-lg shadow-primary/30">
-            👩‍💻
+          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-rose-200 flex items-center justify-center text-3xl shadow-lg shadow-primary/30">
+            <a href='/Ima/头像.jpg'><img src="./Ima/头像.jpg" alt="头像" /> </a>
           </div>
           <div>
             <h3 className="font-bold text-foreground">Tulip</h3>

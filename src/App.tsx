@@ -5,7 +5,7 @@ import { ArticleList } from '@/components/ArticleList';
 import { Sidebar } from '@/components/Sidebar';
 import { Footer } from '@/components/Footer';
 import { blogPosts } from '@/data/blogData';
-import NotesList from './components/NotesList'; // 👈 只加这一行
+import NotesList from './components/NotesList';
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -47,8 +47,8 @@ function App() {
 
       <main className="relative">
         <Hero />
-       
-        {/* 你的原有博客 */}
+
+        {/* 博客文章 */}
         <section className="py-12 lg:py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -64,13 +64,6 @@ function App() {
                 </div>
               </div>
             </div>
-          </div> 
-        </section>
- 
-        {/* ✅ 笔记区域（放在这里最完美） */}
-        <section className="py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <NotesList />
           </div>
         </section>
 
@@ -80,6 +73,13 @@ function App() {
               onCategorySelect={handleCategoryChange}
               selectedCategory={selectedCategory}
             />
+          </div>
+        </section>
+
+        {/* ✅ 笔记放在最后面 */}
+        <section className="py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <NotesList />
           </div>
         </section>
       </main>

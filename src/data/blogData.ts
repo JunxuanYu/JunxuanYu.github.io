@@ -126,7 +126,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Hive 基础知识，安装、配置、使用，一次性全搞定！',
     content: '/notes/Hive.md', // 👈 直接指向你的笔记文件
     category: '读书笔记',
-    tags: ['大数据', '备考', '学习笔记'],
+    tags: ['大数据学习', '备考', '学习笔记'],
     date: '2026-04-03',
     readTime: '10 分钟',
     likes: 999,
@@ -137,7 +137,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Flume 数据流处理 础知识，安装、配置、使用，一次性全搞定！',
     content: '/notes/Flume.md', // 👈 直接指向你的笔记文件
     category: '读书笔记',
-    tags: ['大数据', '备考', '学习笔记'],
+    tags: ['大数据学习', '备考', '学习笔记'],
     date: '2026-04-03',
     readTime: '10 分钟',
     likes: 999,
@@ -148,7 +148,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'MapReduce 数据处理基础知识，安装、配置、使用，一次性全搞定！',
     content: '/notes/MapReduce.md', // 👈 直接指向你的笔记文件
     category: '读书笔记',
-    tags: ['大数据', '备考', '学习笔记'],
+    tags: ['大数据学习', '备考', '学习笔记'],
     date: '2026-04-03',
     readTime: '10 分钟',
     likes: 999,
