@@ -1,0 +1,20 @@
+{
+  "notes": [
+    {
+      "title": "Hive的学习笔记",
+      "fileName": "Hive.md",
+      "path": "/notes/Hive.md"
+    },
+    {
+      "title": "Flume的学习笔记",
+      "fileName": "Flume.md",
+      "path": "/notes/Flume.md"
+    }
+    ,
+    {
+      "title": "MapReduce的学习笔记",
+      "fileName": "MapReduce.md",
+      "path": "/notes/MapReduce.md"
+    }
+  ]
+}
