@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+import { useNavigate } from "react-router-dom";
 
 // 笔记类型定义
 interface Note {
@@ -12,15 +11,11 @@ interface Note {
 const NotesList = () => {
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(true);
-  const [selectedContent, setSelectedContent] = useState<string>("");
-  const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
 
-  // 加载笔记内容
-  const loadNoteContent = async (path: string) => {
-    const res = await fetch(path);
-    const content = await res.text();
-    setSelectedContent(content);
-    setShowModal(true);
+  // 导航到笔记详情页
+  const navigateToNote = (fileName: string) => {
+    navigate(`/note/${fileName}`);
   };
 
   // 读取笔记列表
@@ -48,8 +43,8 @@ const NotesList = () => {
         {notes.map((note, index) => (
           <div
             key={index}
-            className="note-card"
-            onClick={() => loadNoteContent(note.path)}
+            className="note-card cursor-pointer hover:shadow-md transition-shadow"
+            onClick={() => navigateToNote(note.fileName)}
           >
             <div className="icon">📝</div>
             <h3>{note.title}</h3>
@@ -57,23 +52,6 @@ const NotesList = () => {
           </div>
         ))}
       </div>
-
-      {/* 弹窗显示笔记内容 */}
-      {showModal && (
-        <div className="note-modal">
-          <div className="modal-overlay" onClick={() => setShowModal(false)} />
-          <div className="modal-content">
-            <button className="close-btn" onClick={() => setShowModal(false)}>
-              ×
-            </button>
-            <div className="markdown-body">
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                {selectedContent}
-              </ReactMarkdown>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

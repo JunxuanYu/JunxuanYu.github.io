@@ -269,7 +269,7 @@
   color: #080306;
 }
 .markdown-body code {
-  background: #d0c5c5;  /* 代码块背景颜色*/
+  background: #e5d4d4;  /* 代码块背景颜色*/
   padding: 2px 6px;
   border-radius: 4px;
   color: #0e0c0d;  /* 代码块文字颜色*/
@@ -279,6 +279,13 @@
   padding: 16px;
   border-radius: 10px;
   overflow-x: auto;
+  box-shadow: none;
+  border: none;
+}
+
+.markdown-body code {
+  box-shadow: none;
+  border: none;
 }
 
 .tag-cute {

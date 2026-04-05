@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { ArticleList } from '@/components/ArticleList';
@@ -6,8 +7,9 @@ import { Sidebar } from '@/components/Sidebar';
 import { Footer } from '@/components/Footer';
 import { blogPosts } from '@/data/blogData';
 import NotesList from './components/NotesList';
+import NoteDetail from './components/NoteDetail';
 
-function App() {
+function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
@@ -86,6 +88,17 @@ function App() {
 
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/note/:fileName" element={<NoteDetail />} />
+      </Routes>
+    </Router>
   );
 }
 

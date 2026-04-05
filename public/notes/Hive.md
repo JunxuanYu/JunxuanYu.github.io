@@ -1,8 +1,8 @@
-﻿# 						Hive
+﻿# **Hive**    
 
-## Hive伪分布式部署
+## **Hive伪分布式部署**
 
-### Hive 的安装
+### **Hive的安装**
 
 ​	先确保Hadoop能正常启动。启动失败的，可以参考[Hadoop安装部署教程](https://www.kdocs.cn/l/cg0JtlQ5eQrz)。在使用`jps`查看进程的时候，发现缺失`DataNode`,可能是由于上次使用的时候没有停止Hadoop的使用，导致`DataNode`没有及时结束，系统误以为该进程仍在进行，可以使用`stop-all.sh`将Hadoop进行关闭，然后使用`start-all.sh`重新启动Hadoop；若仍未能成功，则先停止Hadoop的运行，找到Hadoop的data缓存文件，将其删除，重新启动Hadoop。
 

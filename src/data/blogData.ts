@@ -120,37 +120,4 @@ export const blogPosts: BlogPost[] = [
     readTime: '4 分钟',
     likes: 267,
   },
-   {
-    id: '11',
-    title: 'Hive数据仓库笔记',
-    excerpt: 'Hive 基础知识，安装、配置、使用，一次性全搞定！',
-    content: '/notes/Hive.md', // 👈 直接指向你的笔记文件
-    category: '大数据学习',
-    tags: ['大数据学习', '备考', '学习笔记'],
-    date: '2026-04-03',
-    readTime: '10 分钟',
-    likes: 999,
-  },
-  {
-    id: '12',
-    title: 'Flume数据流处理笔记',
-    excerpt: 'Flume 数据流处理 础知识，安装、配置、使用，一次性全搞定！',
-    content: '/notes/Flume.md', // 👈 直接指向你的笔记文件
-    category: '大数据学习',
-    tags: ['大数据学习', '备考', '学习笔记'],
-    date: '2026-04-03',
-    readTime: '10 分钟',
-    likes: 999,
-  },
-  {
-    id: '13',
-    title: 'MapReduce数据处理笔记',
-    excerpt: 'MapReduce 数据处理基础知识，安装、配置、使用，一次性全搞定！',
-    content: '/notes/MapReduce.md', // 👈 直接指向你的笔记文件
-    category: '大数据学习',
-    tags: ['大数据学习', '备考', '学习笔记'],
-    date: '2026-04-03',
-    readTime: '10 分钟',
-    likes: 999,
-  }
 ];

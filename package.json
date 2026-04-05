@@ -4,12 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://junxuanyu.github.io/",
-
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build --base=/",
     "deploy": "gh-pages -d dist -b main"
-
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -53,6 +51,7 @@
     "react-hook-form": "^7.70.0",
     "react-markdown": "^10.1.0",
     "react-resizable-panels": "^4.2.2",
+    "react-router-dom": "^7.14.0",
     "recharts": "^2.15.4",
     "remark-gfm": "^4.0.1",
     "sonner": "^2.0.7",
