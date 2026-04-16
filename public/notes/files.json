@@ -14,6 +14,21 @@
       "title": "MapReduce的学习笔记",
       "fileName": "MapReduce",
       "path": "/notes/MapReduce.md"
-    }
+    },
+	{
+		"title":"Hadoop单机模式部署",
+		"fileName":"Hadoop单机模式部署",
+		"path":"/notes/Hadoop单机模式部署.md"
+	},
+	{
+		"title":"Hadoop伪分布式部署",
+		"fileName":"Hadoop伪分布式安装部署",
+		"path":"/notes/Hadoop伪分布式安装部署.md"
+	},
+	{
+		"title":"Hadoop完全分布式部署",
+		"fileName":"Hadoop完全分布式部署",
+		"path":"/notes/Hadoop完全分布式部署.md"
+	}
   ]
 }
