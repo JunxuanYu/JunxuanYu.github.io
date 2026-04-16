@@ -244,9 +244,9 @@ a1.sinks.k1.channel = c1
 mysource.conf 上传到/opt/apache-flume-1.8.0-bin/conf目录下
 
 启动Flume开始监听
-开启终端并连接服务器，然后进入目录：
+开启终端并连接服务器，然后进入目录： (mycource.conf是./conf目录下的一个配置文件)
 	cd /opt/apache-flume-1.8.0-bin 
-	bin/flume-ng agent --conf conf --conf-file conf/mysource.conf --name a1 -Dflume.root.logger=INFO,console
+	`bin/flume-ng agent --conf conf --conf-file conf/mysource.conf --name a1 -Dflume.root.logger=INFO,console`
 
 可以看到系统不断产生事件：根据配置文件中interval参数设定的时间间隔，对数据不断累加
 
